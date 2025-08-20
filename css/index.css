@@ -5,39 +5,81 @@
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
     display: grid;
     place-items: center;
     min-height: 100vh;
-    background: url('./img/img.jpeg');
+    /* COLOQUEI UM CAMINHO USANDO A LÓGICA DE CD DO WINDOWS */
+    background: url('../img/img.jpeg'); 
     background-size: cover;
     background-position: center;
 }
 
-.container{
-    width: 400px;
-    background-color: rgba(129, 129, 129, 0.756);
-    border: 2px solid rgba(165, 164, 164, 0.5);
-    border-radius: 15px;
-    color: white;
-    padding: 30px 40px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 14px 28px, rgba(0, 0, 0, 0.32) 0px 10px 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+/* TIREI O NOME DA CLASSE, APENAS DEIXEI MAIN, ENTÃO NÃO PRECISA DE .CONTAINER */
+/* OBS: SE O MAIN TEM INTENÇÃO DE SER A DIV PRINCIPAL DE TELA TODA, COLOCA ELA COMO TELA INTEIRA. MUDADO. */
+main {
+    width: 100%;
+    height: 100%;
+    /* O ESQUEMA QUE TE PASSEI NO ZAP PRA CENTRALIZAR */
+    display: grid;
+    place-items: center;
 }
 
-.container h1{
+main h1{
     font-size: 36px;
     text-align: center;
     padding: 20px 15px;
 }
 
+/* GRAVE: A TAG form QUE VEM LOGO DEPOIS DO MAIN É EXTREMAMENTE IMPORTANTE, 
+A SEGUNDA MAIOR NA HIERARQUIA, VOCÊ OBRIGATÓRIAMENTE TINHA QUE TER EDITADO ELA */
+
+/* AS CONFIGURAÇÕES VISUAIS NÃO ERAM NO FORMULARIO? ENTÃO NÃO FAZ SENTIDO FICAR NO MAIN, MUDADO */
+
+/* TAMBÉM DEIXEI O FORMS COMO DEVERIA ESTAR QUANDO ERA MAIN, ISTO É, O PADRÃO */
+
+form {
+    display: flex;
+    /* O DISPLAY FLEX POR PADRÃO VEM SETADO ROW AQUI, ENTÃO AS COISAS FICAM DE LADO. MAS SE VOCÊ COLOCAR column
+    VAI CONSEGUIR USAR TUDO QUE O DISPLAY FLEX OFERECE, MAS CONTINUANDO A FICAR UMA div EMBAIXO DA OUTRA. MACETE TOP */
+    flex-direction: column;
+    /* VAI COLOCAR TODOS OS ELEMENTOS DA DIV 20px DE DISTANCIA UMA DA OUTRA COMO TE FALEI NO ZAP*/
+    /* MAS FUTURAMENTE, BUSQUE USAR JUSTIFY CONTENT NELE, IA FICAR MELHOR QUE GAP. SÓ COLOQUEI ELE AQUI PORQUE CASOU MELHOR NO COMO FOI FEITO */
+    gap: 20px;
+    width: 400px;
+    /* AUMENTEI PARA 600PX PARA O GAP DE 20px FICAR MAIS BONITO*/
+    height: 600px;
+    color: white;
+    /* TINHA FORMAS MELHORES DE FAZER ISSO, SEM PADDING, MAS É VÁLIDO */
+    padding: 30px 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 14px 28px, rgba(0, 0, 0, 0.32) 0px 10px 10px;
+    background-color: rgba(129, 129, 129, 0.756);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 15px;
+    border: 2px solid rgba(165, 164, 164, 0.5);
+
+}
+
+/* CONFIGURAÇÃO DO PAI DOS INPUTS ESCRITOS DENTRO DO FORMULARIO, DIV QUE ADC */
 .caixa_input {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* COMO AGORA PASSARAM A SER FILHAS, COLOQUEI caixas_input, E caixa_input FICOU PARA O PAI DELAS */
+.caixas_input {
     position: relative;
     width: 100%;
     height : 50px;
     margin: 30px 0 ;
 }
 
-.caixa_input input {
+.caixas_input input {
     width: 100%;
     height: 100%;
     background-color: transparent;
@@ -50,11 +92,11 @@ body {
     border-radius: 40px;
 }
 
-.caixa_input input::placeholder {
+.caixas_input input::placeholder {
     color: rgb(230, 230, 230);
 }
 
-.caixa_input i { 
+.caixas_input i { 
     position: absolute;
     right: 15px;
     font-size: 23px;
@@ -83,15 +125,24 @@ body {
     margin-right: 5px;
 }
 
+/* O PARAMETRO AUTO SERVE PARA INDICAR QUE VOCÊ VAI DEIXAR A DIV COM LARGURA OU ALTURA SEM TAMANHO FIXO */
+.lembrar_senha_link_para_esquecer_senha {
+    width: auto;
+    height: auto;
+}
+
 .lembrar_senha a {
     text-decoration: none;
-    margin-left: 50px;
+    /* TINHA UM MARGIN AQUI, DESNECESSÁRIO ENTÃO TIREI */
     color: white;
 }
 
 .lembrar_senha a:hover {
     text-decoration: underline; color: rgb(255, 255, 255);
 }
+
+/* AQUI VOCÊ CHAMOU O BOTÃO PELA CLASSE, NADA MAL. VOCÊ NÃO SABE O QUÃO IMPORTANTE ISSO AQUI É
+NO FUTURO EU TE EXPLICO */
 
 .Login {
     width: 100%;

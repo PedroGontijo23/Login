@@ -1,44 +1,55 @@
+<!-- MUDEI O ESQUEMA DE DIRETÓRIOS PARA DEIXAR MAIS ORGANIZADO -->
+
 <!DOCTYPE html>
 <html lang="PT-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- NICE, ESSE SITE DE ICONES É MUITO BOM, TAMBÉM USO -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+    <!-- MUDEI O NOME DO ARQUIVO CSS, O PADRÃO É MANTER O MESMO NOME DO ARQUIVO CSS. LEMBRA? -->
+    <link rel="stylesheet" href="../css/index.css">
     <title>LOGIN TEST</title>
 </head>
+    <body>
+        <!-- ESSAS TAGS PRINCIPAIS (MAIN, FOOTER, HEADER, NAV) NÃO PRECISAM DE CLASSE, ACABA ATRAPALHANDO-->
+        <main>
+            <form>
+                <!-- SEI QUE O OBJETIVO É SER UM TESTE, MAS JÁ APLICANDO REGRAS VISUAIS, É NORMAL TER AQUI O NOME DO SITE, ENTÃO COLOQUEI UAIFLIX -->
+                <h1>UAIFLIX</h1>
 
-<body>
+                <!-- NICE, COLOCANDO MESMO NOME PARA COISAS IGUAIS :) -->
+                <!-- MAS ELEMENTOS IGUAIS ASSIM SÃO FILHOS NÉ? ENTÃO FALTA UM PAI -->
+                <div class="caixa-input">
+                    <div class="caixas_input"> 
+                        <input placeholder="Usuário" type="email">
+                        <i class="bx bxs-user"></i>
+                    </div>
+                    <div class="caixas_input">
+                        <input placeholder="Senha" type="password">
+                        <i class="bx bxs-lock-alt"></i>
+                    </div>
+                </div>
+        
 
-    <main class="container">
-        <form>
-            <h1>Login test</h1>
-            <div class="caixa_input">
-                <input placeholder="Usuário" type="email">
-                <i class="bx bxs-user"></i>
-            </div>
-            <div class="caixa_input">
-                <input placeholder="Senha" type="password">
-                <i class="bx bxs-lock-alt"></i>
-            </div>
+                <div class="lembrar_senha">
+                    <label>
+                        <input type="checkbox">
+                        Lembrar senha
+                    </label>
+                    <!-- AQUI FALTOU UMA DIVZINHA PARA ESSE LINK -->
+                    <div class="lembrar_senha_link_para_esquecer_senha">
+                        <a href="#">Esqueci a senha</a>
+                    </div>
+                </div>
 
-            <div class="lembrar_senha">
-                <label>
-                    <input type="checkbox">
-                    Lembrar senha
-                </label>
-                    <a href="#">Esqueci a senha</a>
-            </div>
+                <button type="submit" class="Login">LOGIN</button>
 
-                <button type="submit" class="Login">Login</button>
-
-            <div class="registre-se">
-                <p>Não tem uma conta? <a href="#"><strong>Cadastre-se</strong></a></p>
-            </div>
-        </form>
-    </main>
-    
-</body>
-
+                <div class="registre-se">
+                    <!-- LEGAL O USO DO STRONG, MAS DAVA PARA EDITAR O TEXTO DEIXANDO EM NEGRITO DIRETAMENTE NA TAG a PARA POUPAR TRAMPO -->
+                    <p>Não tem uma conta? <a href="#"><strong>Cadastre-se</strong></a></p>
+                </div>
+            </form>
+        </main>
+    </body>
 </html>
