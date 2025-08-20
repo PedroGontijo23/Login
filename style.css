@@ -8,5 +8,82 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    background: url('./img/img.jpeg');
+    background-size: cover;
+    background-position: center;
 }
+
+.container{
+    width: 400px;
+    background-color: transparent;
+    border: 2px solid rgba(128, 128, 128, 0.5);
+    border-radius: 15px;
+    color: white;
+    padding: 30px 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 14px 28px, rgba(0, 0, 0, 0.32) 0px 10px 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container h1{
+    font-size: 36px;
+    text-align: center;
+    padding: 20px 15px;
+}
+
+.caixa_input {
+    position: relative;
+    width: 100%;
+    height : 50px;
+    margin: 30px 0 ;
+}
+
+.caixa_input input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid rgba(128, 128, 128, 0.5);
+    outline: none;
+    font-size: 15px;
+    color: white;
+    padding: 20px 45px 20px 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 40px;
+}
+
+.caixa_input input::placeholder {
+    color: rgb(211, 211, 211);
+}
+
+.caixa_input i { 
+    position: absolute;
+    right: 15px;
+    font-size: 23px;
+    top: 25%;
+    /* Há duas formas de posicionar o icone centro do input, a atual que esta aplicada onde o icone se inicia em 25% fazendo com que o seu meio fique em 50% do input
+    e a outra forma que seria colocando o icone para começar em 50% e arrastando o seu eixo y para -50% assim centralizando ele no imput
+    para arrastar o eixo y segue a linha de comando:
+    top: 50%;
+    transform: translateY(-50%); */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
